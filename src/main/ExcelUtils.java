@@ -53,7 +53,7 @@ public class ManipularExcel {
 		return Var.valueOf(sheet);
 	}
 
-	@CronapiMetaData(type = "function", name = "{{createBlankRow}}", description = "{{createBlankRowDescription}}", returnType = ObjectType.UNKNOWN)
+	@CronapiMetaData(type = "function", name = "{{createLine}}", description = "{{createLineDescription}}", returnType = ObjectType.UNKNOWN)
 	public static Var createLine(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramSheet}}") Var sheet)
@@ -62,7 +62,7 @@ public class ManipularExcel {
 		return Var.valueOf(row);
 	}
 	
-	@CronapiMetaData(type = "function", name = "{{getColumnValue}}", description = "{{getColumnValueDescription}}", returnType = ObjectType.OBJECT)
+	@CronapiMetaData(type = "function", name = "{{getCellValue}}", description = "{{getCellValueDescription}}", returnType = ObjectType.OBJECT)
 	public static Var getCellValue(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -100,7 +100,7 @@ public class ManipularExcel {
   return valor;
 	}
 
-	@CronapiMetaData(type = "function", name = "{{insertColumnValue}}", description = "{{insertColumnValueDescription}}", returnType = ObjectType.VOID)
+	@CronapiMetaData(type = "function", name = "{{insertCellValue}}", description = "{{insertCellValueDescription}}", returnType = ObjectType.VOID)
 	public static void insertCellValue(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -139,7 +139,7 @@ public class ManipularExcel {
     }
 	}
 
-	@CronapiMetaData(type = "function", name = "{{setColumnType}}", description = "{{setColumnTypeDescription}}", returnType = ObjectType.VOID)
+	@CronapiMetaData(type = "function", name = "{{setCellType}}", description = "{{setCellTypeDescription}}", returnType = ObjectType.VOID)
 	public static void setCellType(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -180,7 +180,7 @@ public class ManipularExcel {
 		}
 	}
 
-	@CronapiMetaData(type = "function", name = "{{columnHorizontalAlignment}}", description = "{{columnHorizontalAligmnentDescription}}", returnType = ObjectType.VOID)
+	@CronapiMetaData(type = "function", name = "{{alignCellTextHorizontal}}", description = "{{alignCellTextHorizontalDescription}}", returnType = ObjectType.VOID)
 	public static void alignCellTextHorizontal(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -215,7 +215,7 @@ public class ManipularExcel {
 		cell.setCellStyle(style);
 	}
 
-	@CronapiMetaData(type = "function", name = "{{columnVerticalAlignment}}", description = "{{columnVerticalAlignmentDescription}}", returnType = ObjectType.VOID)
+	@CronapiMetaData(type = "function", name = "{{alignCellTextVertical}}", description = "{{alignCellTextVerticalDescription}}", returnType = ObjectType.VOID)
 	public static void alignCellTextVertical(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -253,7 +253,7 @@ public class ManipularExcel {
 		cell.setCellStyle(style);
 	}
 
-	@CronapiMetaData(type = "function", name = "{{customizeFont}}", description = "{{customizeFontDescription}}", returnType = ObjectType.VOID)
+	@CronapiMetaData(type = "function", name = "{{FontProperties}}", description = "{{FontPropertiesDescription}}", returnType = ObjectType.VOID)
 	public static void setFontProperties(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -352,7 +352,7 @@ public class ManipularExcel {
 		cell.setCellStyle(style);
 	}
 
-	@CronapiMetaData(type = "function", name = "{{setColumnBorder}}", description = "{{setColumnBorderDescription}}", returnType = ObjectType.VOID)
+	@CronapiMetaData(type = "function", name = "{{setCellBorder}}", description = "{{setCellBorderDescription}}", returnType = ObjectType.VOID)
 	public static void setBorder(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -403,7 +403,7 @@ public class ManipularExcel {
 		cell.setCellStyle(style);
 	}
 
-	@CronapiMetaData(type = "function", name = "{{setColumnBorderColor}}", description = "{{setColumnBorderColorDescription}}", returnType = ObjectType.VOID)
+	@CronapiMetaData(type = "function", name = "{{setBorderColor}}", description = "{{setBorderColorDescription}}", returnType = ObjectType.VOID)
 	public static void setBorderColor(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramColNum}}") Var columnNumber,
@@ -602,7 +602,7 @@ public class ManipularExcel {
 		cell.setCellStyle(style);
 	}
 
-	@CronapiMetaData(type = "function", name = "{{createRowWithValues}}", description = "{{createRowWithValuesDescription}}", returnType = ObjectType.UNKNOWN)
+	@CronapiMetaData(type = "function", name = "{{createLineWithValue}}", description = "{{createLineWithValueDescription}}", returnType = ObjectType.UNKNOWN)
 	public static void createLineWithValueSet(
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramSheet}}") Var sheet,
 			@ParamMetaData(type = ObjectType.STRING, description = "{{paramRowNum}}") Var rowNumber,
